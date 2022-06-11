@@ -1,0 +1,196 @@
+:root {
+    --dark-color: rgba(25, 40, 63);
+    --green-color: rgba(39, 191, 205);
+    --yellow-color: rgb(255, 196, 0);
+    --section-color: rgb(239, 247, 250);
+}
+
+
+/* Start global */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mainTitle {
+    margin-bottom: 190px;
+}
+
+.mainTitle::after {
+    content: '';
+    width: 220px;
+    height: 2px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+}
+
+
+/* End global */
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.nav-item .nav-link {
+    color: white;
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus {
+    color: var(--green-color);
+}
+
+.search {
+    border-left: 1px solid var(--green-color);
+}
+
+.search svg {
+    color: var(--green-color);
+}
+
+.navbar-toggler {
+    font-size: 25px;
+    color: white;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    border: 1px solid white;
+}
+
+
+/* Landing Start  */
+
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+
+.mainTitleLanding {
+    letter-spacing: 3px;
+}
+
+
+/* Landing End */
+
+
+/* Start Features */
+
+.feature {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.icon-holder .number {
+    color: var(--section-color);
+}
+
+.icon-holder .icon {
+    color: var(--green-color);
+}
+
+.row h1 {
+    color: var(--yellow-color);
+}
+
+
+/* End Features */
+
+
+/* Start Gallary */
+
+.gallary {
+    background-color: var(--section-color);
+}
+
+.gallary .gallary-filter {
+    list-style: none;
+}
+
+.gallary-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.gallary-item::after {
+    content: attr(data-item);
+    position: absolute;
+    background-color: rgba(39, 191, 205, 0.5);
+    width: calc(100% - 10px);
+    height: 100%;
+    top: -5px;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 10px));
+}
+
+.gallary-item:hover::after {
+    transform: translateX(-5px);
+}
+
+
+/* End Gallary */
+
+
+/* Start Stuff */
+
+.stuff .stuff-description {
+    max-width: 500px;
+}
+
+
+/* End Stuff */
+
+
+/* Start Team */
+
+.team {
+    background-color: var(--section-color);
+}
+
+
+/* End Team */
+
+
+/* Start Project */
+
+.project .project-panal {
+    background-color: var(--dark-color);
+}
+
+
+/* End Project */
+
+
+/* Start Subscribe */
+
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type="email"] {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input[type="email"]::placeholder {
+    color: white;
+}
+
+.subscribe input[type="email"]:focus {
+    outline: none;
+}
+
+
+/* End Subscribe */
